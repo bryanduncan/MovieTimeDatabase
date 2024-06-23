@@ -1,10 +1,12 @@
 import React from 'react';
-import mockup from './MTdb.jpg'
+import { ReactComponent as Logo } from './logo.svg';
 
 function App() {
     const value = 'World';
     return (
-        <img src={mockup} alt="MOCKUP" />
+        <div>
+            <Logo />
+        </div>
     );
 }
 

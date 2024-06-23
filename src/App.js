@@ -1,11 +1,10 @@
 import React from 'react';
+import mockup from './MTdb.jpg'
 
 function App() {
     const value = 'World';
     return (
-        <div>Hello {value}
-        <MyButton/>
-        </div>
+        <img src={mockup} alt="MOCKUP" />
     );
 }
 

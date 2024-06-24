@@ -1,18 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 function App() {
-    const value = 'World';
-    return (
-    <>
-        <img src={"./MTdb.jpg"} />
-    </>
-    );
-}
+  const [data, setData] = useState('');
 
-function MyButton() {
-    return (
-        <button>I'm a button</button>
-    );
+  useEffect(() => {
+    (async function () {
+      const { text } = await( await fetch(`/api/message`)).json();
+      setData(text);
+    })();
+  });
+
+  return <div>{data}</div>;
 }
 
 export default App;
